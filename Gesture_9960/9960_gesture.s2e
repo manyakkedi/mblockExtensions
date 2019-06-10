@@ -1,0 +1,70 @@
+{
+	"extensionName": "gesture9960",
+	"description": "Simple code blocks for gesture sensor (9960)",
+	"sort": 0,
+	"author": "SERAT SERIN(seratserin@gmail.com)",
+	"homepage": "",
+	"javascriptURL": "js/demo.js",
+	"firmware": "1.0",
+	"extensionPort": 0,
+	"version":"1.0",
+	"extensionPort": 0,
+	"blockSpecs": [["w",
+	"JEST9960_BASLAT",
+	"jest9960Baslat",
+	"2",
+	{
+		"setup": "",
+		"inc": "#include \"SparkFun_APDS9960.h\"\n ",
+		"def": "SparkFun_APDS9960 apds = SparkFun_APDS9960();\n",
+		"work": "apds.init();\n apds.enableGestureSensor(true);\n",
+		"loop": ""
+	}],
+	["b",
+	"Sensör Kullanilabilir mi",
+	"is9960Available",
+	{
+		"setup": "",
+		"inc": "",
+		"def": "",
+		"work": "apds.isGestureAvailable() \n",
+		"loop": ""
+	}],
+	["w",
+	"Jest Oku",
+	"jestOku",
+	{
+		"setup": "",
+		"inc": "",
+		"def": "int jestno = 0;\n",
+		"work": "jestno = apds.readGesture(); \n",
+		"loop": ""
+	}],
+	["b",
+	"AlgÄ±lanan Jest %d.algilananjest",
+	"algilananJest",
+	"SOL",
+	{
+		"setup": "",
+		"inc": "",
+		"def": "",
+		"work": "jestno == {0} \n",
+		"loop": ""
+	}]],
+	"menus": {
+	"algilananjest":["SOL", "SAG", "YUKARI", "ASAGI", "YAKIN", "UZAK"]
+		
+	},
+	"values": {
+		"SOL": 1,
+		"SAG": 2,
+		"YUKARI": 3,
+		"ASAGI": 4,
+		"YAKIN": 5,
+		"UZAK": 6
+		
+	},
+	"translators": {
+		
+	}
+}
