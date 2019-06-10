@@ -1,0 +1,111 @@
+{
+	"extensionName": "keyboard",
+	"description": "Code blocks to send keystoreks",
+	"sort": 0,
+	"author": "SERAT SERIN(seratserin@gmail.com)",
+	"homepage": "",
+	"javascriptURL": "js/demo.js",
+	"firmware": "1.0",
+	"extensionPort": 0,
+	"version":"1.0",
+	"extensionPort": 0,
+	"blockSpecs": [["w",
+	"Klavye Başlat",
+	"keyboardBegin",
+	{
+		"setup": "",
+		"inc": "#include \"Keyboard.h\"\n ",
+		"def": "",
+		"work": "Keyboard.begin();\n",
+		"loop": ""
+	}],
+	["w",
+	"%n.tuslar tuşuna bas",
+	"tusBas",
+	"a",
+	{
+		"setup": "",
+		"inc": "",
+		"def": "",
+		"work": "Keyboard.press({0}); \n",
+		"loop": ""
+	}],
+	["w",
+	"%n.tuslar tuşunu bırak",
+	"tusBirak",
+	"a",
+	{
+		"setup": "",
+		"inc": "",
+		"def": "",
+		"work": "Keyboard.release({0}); \n",
+		"loop": ""
+	}],
+	["w",
+	"Klavyeden %n yaz",
+	"yaz",
+	"Merhaba",
+	{
+		"setup": "",
+		"inc": "",
+		"def": "",
+		"work": "Keyboard.print({0}); \n",
+		"loop": ""
+	}],
+	["w",
+	"Klavyeden satıra %n yaz",
+	"satirYaz",
+	"Merhaba",
+	{
+		"setup": "",
+		"inc": "",
+		"def": "",
+		"work": "Keyboard.println({0}); \n",
+		"loop": ""
+	}],
+	["w",
+	"Tüm tuşları bırak",
+	"tuslariBirak",
+	{
+		"setup": "",
+		"inc": "",
+		"def": "",
+		"work": "Keyboard.releaseAll(); \n",
+		"loop": ""
+	}],
+	["w",
+	"Klavye Kapat",
+	"kapat",
+	{
+		"setup": "",
+		"inc": "",
+		"def": "",
+		"work": "Keyboard.end(); \n",
+		"loop": ""
+	}]],
+	"menus": {
+	"tuslar":["CTRL", "SHIFT", "ALT", "ALT_GR", "YUKARI_OK", "AŞAĞI_OK","SOL_OK","SAĞ_OK", "BACKSPACE", "ENTER", "TAB", "ESC", "DELETE", "a"]
+		
+	},
+	"values": {
+		"CTRL": 128,
+		"SHIFT": 129,
+		"ALT": 130,
+		"ALT_GR": 134,
+		"YUKARI_OK": 218,
+		"AŞAĞI_OK": 217,
+		"SOL_OK": 216,
+		"SAĞ_OK": 215,
+		"BACKSPACE": 178, 
+		"ENTER": 176, 
+		"TAB": 179, 
+		"ESC": 177, 
+		"DELETE":212,
+		"a":65
+		
+		
+	},
+	"translators": {
+		
+	}
+}
