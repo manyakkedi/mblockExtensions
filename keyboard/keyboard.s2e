@@ -1,0 +1,160 @@
+{
+	"extensionName": "keyboard",
+	"description": "Bilgisayar klavyesi kullanma eklentisi (ATmega32u4 işlemcili arduino gerekli)",
+	"sort": 0,
+	"author": "SERAT SERIN(seratserin@gmail.com)",
+	"homepage": "",
+	"javascriptURL": "js/demo.js",
+	"firmware": "1.0",
+	"extensionPort": 0,
+	"version":"1.0",
+	"extensionPort": 0,
+	"blockSpecs": [["w",
+	"Initialize Keyboard",
+	"keyboardBegin",
+	{
+		"setup": "",
+		"inc": "#include \"Keyboard.h\"\n ",
+		"def": "",
+		"work": "Keyboard.begin();\n delay(500);\n",
+		"loop": ""
+	}],
+	["w",
+	"Press %d.tuslar1 Key",
+	"tusBasiliTut",
+	"CTRL",
+	{
+		"setup": "",
+		"inc": "",
+		"def": "",
+		"work": "Keyboard.press({0});\n",
+		"loop": ""
+	}],
+	["w",
+	"Release %d.tuslar1 Key",
+	"tusBirak",
+	"CTRL",
+	{
+		"setup": "",
+		"inc": "",
+		"def": "",
+		"work": "Keyboard.release({0});\n",
+		"loop": ""
+	}],
+	["w",
+	"Press %d.tuslar2 and release",
+	"tusaBirDefaBas",
+	"ENTER",
+	{
+		"setup": "",
+		"inc": "",
+		"def": "",
+		"work": "Keyboard.press({0});\n delay(10);\n Keyboard.release({0}); ",
+		"loop": ""
+	}],
+	["w",
+	"Print %s",
+	"yaz",
+	"Hello",
+	{
+		"setup": "",
+		"inc": "",
+		"def": "",
+		"work": "Keyboard.print({0});\n",
+		"loop": ""
+	}],
+	["w",
+	"Print to line %s",
+	"satirYaz",
+	"Hello",
+	{
+		"setup": "",
+		"inc": "",
+		"def": "",
+		"work": "Keyboard.println({0});\n",
+		"loop": ""
+	}],
+	["w",
+	"Release all keys",
+	"tuslariBirak",
+	{
+		"setup": "",
+		"inc": "",
+		"def": "",
+		"work": "Keyboard.releaseAll();\n",
+		"loop": ""
+	}],
+	["w",
+	"Close keyboard",
+	"kapat",
+	{
+		"setup": "",
+		"inc": "",
+		"def": "",
+		"work": "Keyboard.end();\n",
+		"loop": ""
+	}]],
+	"menus": {
+	"tuslar1":["CTRL", "SHIFT", "ALT", "ALT_GR", "UP", "DOWN", 
+				"LEFT","RIGHT", "BACKSPACE", "DELETE", "PAGE_DOWN", "PAGE_UP"],
+				
+	"tuslar2":["ALT","BACKSPACE", "ENTER", "TAB", "ESC", "DELETE", "CAPS_LOCK", 
+				"HOME", "END", "UP", "DOWN","LEFT","RIGHT", "PAGE_DOWN", 
+				"PAGE_UP", "INSERT", "F1", "F2", "F3", "F4", "F5", "F6", "F7", "F8", 
+				"F9", "F10", "F11", "F12"]
+		
+	},
+	"values": {
+		"CTRL": 128,
+		"SHIFT": 129,
+		"ALT": 130,
+		"ALT_GR": 134,
+		"UP": 218,
+		"DOWN": 217,
+		"LEFT": 216,
+		"RIGHT": 215,
+		"BACKSPACE": 178, 
+		"ENTER": 176, 
+		"TAB": 179, 
+		"ESC": 177, 
+		"DELETE":212,
+		"CAPS_LOCK":193, 
+		"HOME":210, 
+		"END":213, 
+		"PAGE_DOWN":214, 
+		"PAGE_UP":211, 
+		"INSERT":209,
+		"F1":194, 
+		"F2":195, 
+		"F3":196, 
+		"F4":197, 
+		"F5":198, 
+		"F6":199, 
+		"F7":200, 
+		"F8":201, 
+		"F9":202, 
+		"F10":203, 
+		"F11":204, 
+		"F12":205
+			
+	},
+	"translators": {
+	"latin5":{
+				"Initialize Keyboard":"Klavye Başlat",
+				"Press %d.tuslar1 Key":"%d.tuslar1 tuşuna basılı tut",
+				"Release %d.tuslar1 Key":"%d.tuslar1 tuşunu bırak",
+				"Press %d.tuslar2 and release":"%d.tuslar2 tuşuna bir defa bas",
+				"Print %s":"Klavyeden %s yaz",
+				"Print to line %s":"Klavyeden satıra %s yaz",
+				"Release all keys":"Tüm tuşları bırak",
+				"Close keyboard":"Klavye Kapat",
+				"Hello":"Merhaba",
+				"LEFT":"SOL_OK",
+				"RIGHT":"SAĞ_OK",
+				"UP":"YUKARI_OK",
+				"DOWN":"AŞAĞI_OK"
+
+		}
+	}
+		
+}

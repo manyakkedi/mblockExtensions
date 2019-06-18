@@ -1,0 +1,81 @@
+{
+	"extensionName": "Gesture Detect_APDS9960",
+	"description": "APDS9960 Jest sensörü için eklenti",
+	"sort": 0,
+	"author": "SERAT SERIN(seratserin@gmail.com)",
+	"homepage": "",
+	"javascriptURL": "js/demo.js",
+	"firmware": "1.0",
+	"extensionPort": 0,
+	"version":"1.0",
+	"extensionPort": 0,
+	"blockSpecs": [["w",
+	"Initialize Gesture Sensor",
+	"jest9960Baslat",
+	{
+		"setup": "",
+		"inc": "#include \"SparkFun_APDS9960.h\"\n ",
+		"def": "SparkFun_APDS9960 apds = SparkFun_APDS9960();\n",
+		"work": "apds.init();\n apds.enableGestureSensor(true);\n",
+		"loop": ""
+	}],
+	["b",
+	"is Gesture Sensor Available",
+	"is9960Available",
+	{
+		"setup": "",
+		"inc": "",
+		"def": "",
+		"work": "apds.isGestureAvailable()\n",
+		"loop": ""
+	}],
+	["w",
+	"Read Gesture",
+	"jestOku",
+	{
+		"setup": "",
+		"inc": "",
+		"def": "int jestno = 0;\n",
+		"work": "jestno = apds.readGesture();\n",
+		"loop": ""
+	}],
+	["b",
+	"Detected Gesture %d.algilananjest",
+	"algilananJest",
+	"LEFT",
+	{
+		"setup": "",
+		"inc": "",
+		"def": "",
+		"work": "jestno == {0}\n",
+		"loop": ""
+	}]],
+	"menus": {
+	"algilananjest":["LEFT", "RIGHT", "UP", "DOWN", "NEAR", "FAR"]
+		
+	},
+	"values": {
+		"LEFT": 1,
+		"RIGHT": 2,
+		"UP": 3,
+		"DOWN": 4,
+		"NEAR": 5,
+		"FAR": 6
+		
+	},
+	"translators": {
+		"latin5":{
+			"is Gesture Sensor Available":"Jest Sensörü Kullanilabilir mi",
+			"Initialize Gesture Sensor":"Jest Sensörünü Başlat",
+			"Read Gesture":"Jest Oku",
+			"Detected Gesture %d.algilananjest":"Algılanan Jest %d.algilananjest",
+			"LEFT":"SOL",
+			"RIGHT":"SAĞ",
+			"UP":"YUKARI",
+			"DOWN":"AŞAĞI",
+			"NEAR":"YAKIN",
+			"FAR":"UZAK"
+
+		}
+	}
+}
